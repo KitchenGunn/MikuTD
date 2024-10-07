@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci46c1k0tgiwq"]
+
+[ext_resource type="SpriteFrames" uid="uid://hwnun04xxuo0" path="res://assets/spriteFrames/miku-animations.tres" id="1_y505h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hr8wf"]
+size = Vector2(90, 100)
+
+[node name="miku" type="CharacterBody2D"]
+
+[node name="miku-animatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_y505h")
+animation = &"run"
+frame = 17
+
+[node name="miku-collisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(2.25, -0.5)
+shape = SubResource("RectangleShape2D_hr8wf")
+
+[node name="miku-camera" type="Camera2D" parent="."]
